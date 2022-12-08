@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn English</title>
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+
+    <!--css-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--js-->
+    <script src="js/main.js" type="module"></script>
+</head>
+
+<body>
+
+    <main>
+        <menu>
+            <ul>
+                <li data-match="guess-game">Guess Game</li>
+                <li data-match="fill-game">Fill Game</li>
+                <li data-match="choose-game">Choose Game</li>
+                <li data-match="wordspage">All words</li>
+            </ul>
+        </menu>
+        <div class="container">
+            <div class="words-page active" data-match="wordspage">
+                <h1>All translated words</h1>
+                <div class="words-container">
+                </div>
+            </div>
+            <div class="guess-game" data-match="guess-game">
+                <h1>Guess translate</h1>
+                <h3>Zgadnij polskie tłumaczenie słowa pokazanego po lewej stronie, następnie kliknij w przycisk "Show
+                    Translate", aby dowiedzieć się czy dobrze zgadłeś. </h3>
+                <div class="game-body">
+                    <div class="btns-holder">
+                        <button id="another-word">Another word</button>
+                        <button id="show-translate">Show translate</button>
+                    </div>
+                    <div class="result">
+                        <span id="english-word">English Word</span>
+                        <span id="polish-word">Polish Word</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="fill-game" data-match="fill-game">
+                <h1>Fill Game</h1>
+                <h3>Ułóż z pomieszanych liter angielskie słowo , które jest tłumaczeniem polskiego słowa podanego niżej
+                </h3>
+                <div class="game-body">
+                    <button class="pick-another-word">Another word</button>
+                    <span class="polish-word-fill"></span>
+                    <span class="empty-english-word"></span>
+                    <div class="all-mixed-words"></div>
+                </div>
+
+            </div>
+            <div class="choose-game" data-match="choose-game">
+                <h1>Choose translate</h1>
+                <h3>Wybierz spośród trzech angielskich tłumaczeń odpowiednie polskie słowo</h3>
+                <button id="next-word">Next word</button>
+                <div class="game-body">
+                    <span class="choosed-english-word"></span>
+                    <div class="select-right-word">
+                        <p>a</p>
+                        <p>b</p>
+                        <p>c</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </main>
+
+    <script src="js/englishWords.js"></script>
+    <script src="js/polishWords.js"></script>
+    <script src="js/guessGame.js"></script>
+    <script src="js/chooseGame.js"></script>
+    <script src="js/fillGame.js"></script>
+
+</body>
+
+</html>
